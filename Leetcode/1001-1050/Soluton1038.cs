@@ -14,9 +14,9 @@ Both the left and right subtrees must also be binary search trees.
 using System;
 using System.Collections.Generic;
 using System.Text;
-using leetcode.Leetcode.structs;
+using leetcode_csharp.leetcode.structs;
 
-namespace leetcode.Leetcode._1001_1050
+namespace leetcode_csharp.leetcode._1001_1050
 {
     class Soluton1038
     {

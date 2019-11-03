@@ -41,7 +41,7 @@ s[i] = 'L' or 'R'
 
  */
 
-namespace leetcode.Leetcode._1201_1250
+namespace leetcode_csharp.leetcode._1201_1250
 {
     class Solution1221
     {

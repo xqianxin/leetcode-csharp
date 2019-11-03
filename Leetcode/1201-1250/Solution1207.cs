@@ -29,7 +29,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace leetcode.Leetcode._1201_1250
+namespace leetcode_csharp.leetcode._1201_1250
 {
     class Solution1207
     {

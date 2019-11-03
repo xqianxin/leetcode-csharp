@@ -34,7 +34,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace leetcode.Leetcode._901_950
+namespace leetcode_csharp.leetcode._901_950
 {
     class Solution942
     {

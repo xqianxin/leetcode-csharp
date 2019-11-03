@@ -30,7 +30,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace leetcode.Leetcode._951_1000
+namespace leetcode_csharp.leetcode._951_1000
 {
     class Solution961
     {

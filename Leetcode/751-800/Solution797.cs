@@ -26,7 +26,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace leetcode.Leetcode._751_800
+namespace leetcode_csharp.leetcode._751_800
 {
     class Solution797
     {

@@ -15,9 +15,9 @@ Output: [8,5,10,1,7,null,12]
 using System;
 using System.Collections.Generic;
 using System.Text;
-using leetcode.Leetcode.structs;
+using leetcode_csharp.leetcode.structs;
 
-namespace leetcode.Leetcode._1001_1050
+namespace leetcode_csharp.leetcode._1001_1050
 {
     class Solution1008
     {

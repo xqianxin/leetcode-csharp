@@ -27,7 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace leetcode.Leetcode._851_900
+namespace leetcode_csharp.leetcode._851_900
 {
     class Solution852
     {
