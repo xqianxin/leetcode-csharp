@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "D:\\workspace\\csharp-work\\leetcode-csharp\\leetcode.csproj": {}
+    "D:\\workspace\\csharp-work\\leetcode-csharp\\leetcode-csharp.csproj": {}
   },
   "projects": {
-    "D:\\workspace\\csharp-work\\leetcode-csharp\\leetcode.csproj": {
+    "D:\\workspace\\csharp-work\\leetcode-csharp\\leetcode-csharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\workspace\\csharp-work\\leetcode-csharp\\leetcode.csproj",
-        "projectName": "leetcode",
-        "projectPath": "D:\\workspace\\csharp-work\\leetcode-csharp\\leetcode.csproj",
+        "projectUniqueName": "D:\\workspace\\csharp-work\\leetcode-csharp\\leetcode-csharp.csproj",
+        "projectName": "leetcode-csharp",
+        "projectPath": "D:\\workspace\\csharp-work\\leetcode-csharp\\leetcode-csharp.csproj",
         "packagesPath": "C:\\Users\\xqian\\.nuget\\packages\\",
         "outputPath": "D:\\workspace\\csharp-work\\leetcode-csharp\\obj\\",
         "projectStyle": "PackageReference",
