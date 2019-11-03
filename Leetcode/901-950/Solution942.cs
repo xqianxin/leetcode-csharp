@@ -40,7 +40,15 @@ namespace leetcode.Leetcode._901_950
     {
         public int[] DiStringMatch(string S)
         {
-
+            int[] result = new int[S.Length+1];
+            int low = 0;
+            int high = S.Length;
+            for (int i = 0; i < S.Length; i++)
+            {
+                result[i] = S[i] == 'I' ? low++ : high--;
+            }
+            result[S.Length] = low;
+            return result;
         }
     }
 }
