@@ -62,34 +62,45 @@ namespace leetcode_csharp.leetcode._951_1000
                 return 0;
             }
 
-            if(grid[i][j] == 2)
+            if(grid[i][j] == -2)
             {
-                return 1;
+                bool ok = true;
+                for (int r =0; r < grid.Length; r++)
+                {
+                    for (int c = 0; c < grid.Length; c++)
+                    {
+                        if(grid[r][c] == 0)
+                        {
+                            ok = false;
+                        }
+                    }
+                }
+                return ok ? 1:0;
             }
             int count = 0;
-            if (i - 1 >= 0 && grid[i-1][j] == 0)
+            if (i - 1 >= 0 && (grid[i-1][j] == 0 || grid[i-1][j] == 2))
             {
-                grid[i - 1][j] = -2;
+                grid[i - 1][j] -= 4;
                 count += helper(grid, i - 1, j);
-                grid[i - 1][j] = 0;
+                grid[i - 1][j] += 4;
             }
-            if(i + 1 < grid.Length && grid[i+1][j] == 0)
+            if(i + 1 < grid.Length && (grid[i+1][j] == 0 || grid[i+1][j] == 2))
             {
-                grid[i + 1][j] = -2;
+                grid[i + 1][j] -= 4;
                 count += helper(grid, i + 1, j) ;
-                grid[i + 1][j] = 0;
+                grid[i + 1][j] += 4;
             }
-            if(j - 1 >=0 && grid[i][j-1] == 0)
+            if(j - 1 >=0 && (grid[i][j-1] == 0 || grid[i][j-1] == 2))
             {
-                grid[i][j - 1] = -2;
+                grid[i][j - 1] -= 4;
                 count += helper(grid, i, j - 1);
-                grid[i][j - 1] = 0;
+                grid[i][j - 1] += 4;
             }
-            if(j + 1 < grid[0].Length && grid[i][j+1] == 0)
+            if(j + 1 < grid[0].Length && (grid[i][j+1] == 0 || grid[i][j+1] == 2))
             {
-                grid[i][j + 1] = -2;
+                grid[i][j + 1] -= 4;
                 count += helper(grid, i, j + 1);
-                grid[i][j + 1] = 0;
+                grid[i][j + 1] += 4;
             }
             return count;
         }

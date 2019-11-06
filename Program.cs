@@ -9,7 +9,7 @@ namespace leetcode_csharp
         {
             Solution980 s = new Solution980();
             int[][] p = { new int[] { 1, 0, 0, 0 }, new int[] { 0, 0, 0, 0 }, new int[] { 0, 0, 2, -1 } };
-            s.UniquePathsIII(p);
+            Console.WriteLine(s.UniquePathsIII(p));
             Console.WriteLine("Hello World!");
         }
     }
