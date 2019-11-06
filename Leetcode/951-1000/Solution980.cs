@@ -52,22 +52,70 @@ namespace leetcode_csharp.leetcode._951_1000
     {
         public int UniquePathsIII(int[][] grid)
         {
-            return helper(grid, 0, 0);
+            int r = 0, c = 0;
+            for (int i = 0; i < grid.Length; i++)
+            {
+                for (int j = 0; j < grid[0].Length; j++)
+                {
+                    if (grid[i][j] == 1)
+                    {
+                        r = i;
+                        c = j;
+                        break;
+                    }
+                }
+            }
+            grid[r][c] = 0;
+            Console.WriteLine(r);
+            Console.WriteLine(c);
+            List<List<int[]>> paths = helper(grid, r, c);
+            for (int i = 0; i < paths.Count; i++)
+            {
+                printList(paths[i]);
+            }
+            return paths.Count;
         }
 
-        private int helper(int[][] grid, int i, int j)
+        private void printList(List<int[]> path)
         {
-            if (i >= grid.Length || j >= grid[0].Length)
+            for(int i = 0; i < path.Count; i++)
             {
-                return 0;
+                Console.Write("(");
+                Console.Write(path[i][0]);
+                Console.Write(path[i][1]);
+                Console.Write(")");
+            }
+            Console.Write("\n");
+        }
+
+        private void printGrid(int[][] grid)
+        {
+            for(int i = 0; i < grid.Length; i++)
+            {
+                for (int j = 0; j< grid[0].Length; j++)
+                {
+                    Console.Write(grid[i][j]);
+                    Console.Write(",");
+                }
+                Console.Write("\n");
+            }
+        }
+
+        private List<List<int[]>> helper(int[][] grid, int i, int j)
+        {
+            List<List<int[]>> result = new List<List<int[]>>();
+            if (i < 0 || j < 0 || i >= grid.Length || j >= grid[0].Length)
+            {
+                return result;
             }
 
-            if(grid[i][j] == -2)
+            if(grid[i][j] == 2)
             {
+                // printGrid(grid);
                 bool ok = true;
                 for (int r =0; r < grid.Length; r++)
                 {
-                    for (int c = 0; c < grid.Length; c++)
+                    for (int c = 0; c < grid[0].Length; c++)
                     {
                         if(grid[r][c] == 0)
                         {
@@ -75,34 +123,86 @@ namespace leetcode_csharp.leetcode._951_1000
                         }
                     }
                 }
-                return ok ? 1:0;
+                if (ok)
+                {
+                    int[] point = new int[]{i, j};
+                    List<int[]> path = new List<int[]>();
+                    path.Add(point);
+                    result.Add(path);
+                }
+                return result;
             }
-            int count = 0;
-            if (i - 1 >= 0 && (grid[i-1][j] == 0 || grid[i-1][j] == 2))
+            if(grid[i][j] != 0)
             {
-                grid[i - 1][j] -= 4;
-                count += helper(grid, i - 1, j);
-                grid[i - 1][j] += 4;
+                return result;
             }
-            if(i + 1 < grid.Length && (grid[i+1][j] == 0 || grid[i+1][j] == 2))
+            grid[i][j] = -2;
+            List<List<int[]>> resu = helper(grid, i - 1, j);
+            if (resu.Count > 0)
             {
-                grid[i + 1][j] -= 4;
-                count += helper(grid, i + 1, j) ;
-                grid[i + 1][j] += 4;
+                foreach (List<int[]> pa in resu)
+                {
+                    List<int[]> tmpPath = new List<int[]>();
+                    int[] point = new int[] { i, j };
+                    tmpPath.Add(point);
+                    foreach (int[] po in pa)
+                    {
+                        tmpPath.Add(po);
+                    }
+                    printList(tmpPath);
+                    result.Add(tmpPath);
+                }
             }
-            if(j - 1 >=0 && (grid[i][j-1] == 0 || grid[i][j-1] == 2))
+            List<List<int[]>> resd = helper(grid, i + 1, j) ;
+            if (resd.Count > 0)
             {
-                grid[i][j - 1] -= 4;
-                count += helper(grid, i, j - 1);
-                grid[i][j - 1] += 4;
+                foreach(List<int[]> pa in resd)
+                {
+                    List<int[]> tmpPath = new List<int[]>();
+                    int[] point = new int[] { i, j };
+                    tmpPath.Add(point);
+                    foreach(int[] po in pa)
+                    {
+                        tmpPath.Add(po);
+                    }
+                    printList(tmpPath);
+                    result.Add(tmpPath);
+                }
             }
-            if(j + 1 < grid[0].Length && (grid[i][j+1] == 0 || grid[i][j+1] == 2))
+            List<List<int[]>> resl = helper(grid, i, j - 1);
+            if (resl.Count > 0)
             {
-                grid[i][j + 1] -= 4;
-                count += helper(grid, i, j + 1);
-                grid[i][j + 1] += 4;
+                foreach (List<int[]> pa in resl)
+                {
+                    List<int[]> tmpPath = new List<int[]>();
+                    int[] point = new int[] { i, j };
+                    tmpPath.Add(point);
+                    foreach (int[] po in pa)
+                    {
+                        tmpPath.Add(po);
+                    }
+                    printList(tmpPath);
+                    result.Add(tmpPath);
+                }
             }
-            return count;
+            List<List<int[]>> resr = helper(grid, i, j + 1);
+            if (resr.Count > 0)
+            {
+                foreach (List<int[]> pa in resr)
+                {
+                    List<int[]> tmpPath = new List<int[]>();
+                    int[] point = new int[] { i, j };
+                    tmpPath.Add(point);
+                    foreach (int[] po in pa)
+                    {
+                        tmpPath.Add(po);
+                    }
+                    printList(tmpPath);
+                    result.Add(tmpPath);
+                }
+            }
+            grid[i][j] = 0;
+            return result;
         }
     }
 }
