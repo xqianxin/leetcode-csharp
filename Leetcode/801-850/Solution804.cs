@@ -49,7 +49,6 @@ namespace leetcode_csharp.leetcode._801_850
                 }
                 resMap[tmpRes] = true;
             }
-            int count = 0;
             return resMap.Count;
         }
     }
