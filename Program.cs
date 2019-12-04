@@ -1,5 +1,6 @@
 ﻿using System;
-using leetcode_csharp.leetcode._951_1000;
+using leetcode_csharp.leetcode._1_50;
+using leetcode_csharp.leetcode.structs;
 
 namespace leetcode_csharp
 {
@@ -7,10 +8,8 @@ namespace leetcode_csharp
     {
         static void Main(string[] args)
         {
-            Solution980 s = new Solution980();
-            int[][] p = { new int[] { 0, 0, 0, 0, 0, 0, 2, 0, 0, 0 }, new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 1, 0 } };
-            Console.WriteLine(s.UniquePathsIII(p));
-            Console.WriteLine("Hello World!");
+            Solution32 s = new Solution32();
+            int res = s.LongestValidParentheses("(()");
         }
     }
 }
