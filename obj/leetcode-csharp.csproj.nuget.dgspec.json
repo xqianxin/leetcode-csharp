@@ -1,29 +1,29 @@
 {
   "format": 1,
   "restore": {
-    "D:\\workspace\\csharp-work\\leetcode-csharp\\leetcode-csharp.csproj": {}
+    "/Users/nixqian/workspace/csharp-work/leetcode-csharp/leetcode-csharp.csproj": {}
   },
   "projects": {
-    "D:\\workspace\\csharp-work\\leetcode-csharp\\leetcode-csharp.csproj": {
+    "/Users/nixqian/workspace/csharp-work/leetcode-csharp/leetcode-csharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\workspace\\csharp-work\\leetcode-csharp\\leetcode-csharp.csproj",
+        "projectUniqueName": "/Users/nixqian/workspace/csharp-work/leetcode-csharp/leetcode-csharp.csproj",
         "projectName": "leetcode-csharp",
-        "projectPath": "D:\\workspace\\csharp-work\\leetcode-csharp\\leetcode-csharp.csproj",
-        "packagesPath": "C:\\Users\\xqian\\.nuget\\packages\\",
-        "outputPath": "D:\\workspace\\csharp-work\\leetcode-csharp\\obj\\",
+        "projectPath": "/Users/nixqian/workspace/csharp-work/leetcode-csharp/leetcode-csharp.csproj",
+        "packagesPath": "/Users/nixqian/.nuget/packages/",
+        "outputPath": "/Users/nixqian/workspace/csharp-work/leetcode-csharp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\xqian\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/nixqian/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.0"
+          "netcoreapp3.1"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.0": {
+          "netcoreapp3.1": {
             "projectReferences": {}
           }
         },
@@ -34,7 +34,7 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.0": {
+        "netcoreapp3.1": {
           "imports": [
             "net461",
             "net462",
@@ -50,7 +50,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.100/RuntimeIdentifierGraph.json"
         }
       }
     }

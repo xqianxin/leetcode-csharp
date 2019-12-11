@@ -1,0 +1,11 @@
+/Users/nixqian/workspace/csharp-work/leetcode-csharp/bin/Debug/netcoreapp3.1/leetcode-csharp
+/Users/nixqian/workspace/csharp-work/leetcode-csharp/bin/Debug/netcoreapp3.1/leetcode-csharp.deps.json
+/Users/nixqian/workspace/csharp-work/leetcode-csharp/bin/Debug/netcoreapp3.1/leetcode-csharp.runtimeconfig.json
+/Users/nixqian/workspace/csharp-work/leetcode-csharp/bin/Debug/netcoreapp3.1/leetcode-csharp.runtimeconfig.dev.json
+/Users/nixqian/workspace/csharp-work/leetcode-csharp/bin/Debug/netcoreapp3.1/leetcode-csharp.dll
+/Users/nixqian/workspace/csharp-work/leetcode-csharp/bin/Debug/netcoreapp3.1/leetcode-csharp.pdb
+/Users/nixqian/workspace/csharp-work/leetcode-csharp/obj/Debug/netcoreapp3.1/leetcode-csharp.csprojAssemblyReference.cache
+/Users/nixqian/workspace/csharp-work/leetcode-csharp/obj/Debug/netcoreapp3.1/leetcode-csharp.AssemblyInfoInputs.cache
+/Users/nixqian/workspace/csharp-work/leetcode-csharp/obj/Debug/netcoreapp3.1/leetcode-csharp.AssemblyInfo.cs
+/Users/nixqian/workspace/csharp-work/leetcode-csharp/obj/Debug/netcoreapp3.1/leetcode-csharp.dll
+/Users/nixqian/workspace/csharp-work/leetcode-csharp/obj/Debug/netcoreapp3.1/leetcode-csharp.pdb
