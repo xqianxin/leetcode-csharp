@@ -7,8 +7,6 @@ namespace leetcode_csharp
     {
         static void Main(string[] args)
         {
-            Solution32 s = new Solution32();
-            int count = s.LongestValidParentheses("()");
             return;
         }
     }
